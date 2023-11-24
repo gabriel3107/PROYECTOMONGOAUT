@@ -28,7 +28,14 @@ const productManager= new ProductManager(productPath);
 const chatManager= new ChatManager();
 const cartManager= new CartManager();
 
+const publicAccess = (req, res, next) => {
+    if(req.session?.user) return res.redirect('/');
+    next();
+}
 
+const privateAccess = (req, res, next) => {
+    if(!req.session?.user) return res.redirect('/login'); 
+}
 
 router.get('/realtimeproducts', (req, res) => {
     res.render('realTimeProducts');

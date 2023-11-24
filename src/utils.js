@@ -13,6 +13,9 @@ export const createHash = password =>
 
 export const isValidPassword = (plainPassword, hashedPassword) => 
     bcrypt.compareSync(plainPassword, hashedPassword);
-// export {
-//     __dirname
-// }
+    
+export {
+    __dirname,
+    createHash,
+    isValidPassword
+}

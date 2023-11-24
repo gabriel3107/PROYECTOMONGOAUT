@@ -2,9 +2,9 @@ import express from "express";
 import handlebars from 'express-handlebars'
 import { __dirname } from './utils.js';
 import { Server } from "socket.io";
-import viewsRouter from "./routes/viewsrouter.js";
+import viewsRouter from "./routes/viewrouter.js";
 import productsRouter from './routes/ProductManager.router.js';
-import cartsRouter from "./routes/carts.router.js";
+import cartsRouter from "./routes/cars.router.js";
 import { Server } from "socket.io";
 import mongoose from "mongoose";
 import ChatManager from "./dao/dbManager/chat.manager.js";
